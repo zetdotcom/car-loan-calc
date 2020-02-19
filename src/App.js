@@ -3,19 +3,30 @@ import FormContainer from 'containers/FormContainer';
 import LoanSummaryContainer from 'containers/LoanSummaryContainer';
 import CarsListContainer from 'containers/CarsListContainer';
 import Header from 'components/Header';
+import MainContainer from 'components/ui/MainContainer';
+import { GlobalStyle } from './style';
+import styled from 'styled-components';
+
+const AppWrapper = styled.div`
+	height: 100vh;
+	overflow: auto;
+`;
 
 function App() {
 	return (
-		<div>
+		<AppWrapper>
+			<GlobalStyle />
 			<header>
 				<Header />
 			</header>
 			<div>
-				<FormContainer />
-				<LoanSummaryContainer />
+				<MainContainer>
+					<FormContainer />
+					<LoanSummaryContainer />
+				</MainContainer>
 				<CarsListContainer />
 			</div>
-		</div>
+		</AppWrapper>
 	);
 }
 
