@@ -15,7 +15,7 @@ export default function LoanSummary(props) {
 		<div>
 			{/* <PaperStyled elevation={3}> */}
 			<Heading2>Loan summary</Heading2>
-			<Heading3>Total loan amount: {pounds(loanTotal)}</Heading3>
+			<Heading3>Total loan amount (incl. fees): {pounds(loanTotal)}</Heading3>
 			<Heading3>Monthly payment: {pounds(monthly)}</Heading3>
 			<ul>
 				{paymentSchedule.map(item => (

@@ -34,22 +34,36 @@ export default function FormAndSumaryContainer(props) {
 		props.setMonthly(monthly);
 	}, [monthly]);
 
+	useEffect(() => {
+		loanTermMonths && getPaymentSchedule();
+	}, [loanTermMonths]);
+
+	function getPaymentSchedule() {
+		const payDates = index => new Date().setMonth(date.getMonth() + index, 1);
+		const filledArray = Array(loanTermMonths).fill();
+		const paymentSchedule = filledArray.map((x, index) => {
+			let monthlyPay = monthly;
+			if (index === 0) {
+				monthlyPay = monthly + ARR_FEE;
+			}
+			if (index === filledArray.length - 1) {
+				monthlyPay = monthly + COMP_FEE;
+			}
+			return { date: payDates(index + 1), amount: monthlyPay };
+		});
+
+		setPaymentSchedule(paymentSchedule);
+	}
+
 	function onSubmit(e) {
 		e.preventDefault();
 		if (!dateError && !depositError) {
-			console.log('submit');
 			const monthlyPayment = (price - deposit) / (loanTerm * MONTHS_IN_YR);
 			const loanTotal = price - deposit + COMP_FEE + ARR_FEE;
 			const loanTermMonths = loanTerm * MONTHS_IN_YR;
 			setLoanTotal(loanTotal);
 			setMonthly(monthlyPayment);
 			setLoanTermMonths(loanTermMonths);
-			const payDates = index => new Date().setMonth(date.getMonth() + index, 1);
-			const paymentSchedule = Array(loanTermMonths)
-				.fill()
-				.map((x, index) => ({ date: payDates(index + 1), amount: monthlyPayment }));
-			setPaymentSchedule(paymentSchedule);
-			console.log(paymentSchedule);
 		}
 	}
 

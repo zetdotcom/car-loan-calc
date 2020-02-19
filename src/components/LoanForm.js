@@ -15,6 +15,7 @@ import { FormControl } from '@material-ui/core';
 import FlexItem from 'components/ui/FlexItem';
 import { Heading2 } from 'components/ui/Headings';
 import PaperStyled from 'components/ui/PaperStyled';
+import { pounds } from 'utils';
 // import { ONE_DAY_IN_MS } from 'constants';
 
 const RadioGroupStyled = styled(RadioGroup)`
@@ -22,11 +23,6 @@ const RadioGroupStyled = styled(RadioGroup)`
 		display: flex;
 		flex-direction: row;
 	}
-`;
-
-const FormStyled = styled.form`
-	display: flex;
-	flex: 1 1 300px;
 `;
 
 export default function LoanForm(props) {
@@ -43,8 +39,6 @@ export default function LoanForm(props) {
 		depositError,
 		dateError,
 	} = props;
-
-	// console.log(date.getTime(), new Date().getTime(), ONE_DAY_IN_MS);
 
 	return (
 		<form onSubmit={onSubmit}>
@@ -65,8 +59,7 @@ export default function LoanForm(props) {
 					margin='normal'
 					type='number'
 					error={depositError}
-					// helperText={depositError ? `Deposit value cannot be lower than 15% of price: ${price * 0.15}` : ''}
-					helperText={`Deposit value must beat least 15% of price: ${price * 0.15}`}
+					helperText={`Deposit value must beat least 15% of price: ${pounds(price * 0.15)}`}
 					id='deposit-input'
 					label='Deposit'
 					variant='outlined'
