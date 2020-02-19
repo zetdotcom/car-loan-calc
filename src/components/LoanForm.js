@@ -7,27 +7,15 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
 import Button from 'components/ui/Button';
-import SmallHeading from 'components/ui/SmallHeading';
 import { MuiPickersUtilsProvider, DatePicker } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 
 import styled from 'styled-components';
 import { FormControl } from '@material-ui/core';
+import FlexItem from 'components/ui/FlexItem';
+import { Heading2 } from 'components/ui/Headings';
+import PaperStyled from 'components/ui/PaperStyled';
 // import { ONE_DAY_IN_MS } from 'constants';
-
-export const PaperStyled = styled(Paper)`
-	display: flex;
-	flex-direction: column;
-	padding: 36px 48px;
-	/* margin: 10px; */
-	/* height: 300px; */
-	/* min-height: 50vh; */
-	justify-content: space-around;
-	@media (max-width: 430px) {
-		padding: 10px 15px;
-		width: 100%;
-	}
-`;
 
 const RadioGroupStyled = styled(RadioGroup)`
 	&& {
@@ -59,9 +47,9 @@ export default function LoanForm(props) {
 	// console.log(date.getTime(), new Date().getTime(), ONE_DAY_IN_MS);
 
 	return (
-		<FormStyled onSubmit={onSubmit}>
+		<form onSubmit={onSubmit}>
 			<PaperStyled elevation={3}>
-				<SmallHeading>Start loan calculation</SmallHeading>
+				<Heading2>Start loan calculation</Heading2>
 				<TextField
 					required
 					type='number'
@@ -115,15 +103,6 @@ export default function LoanForm(props) {
 					Show results
 				</Button>
 			</PaperStyled>
-			{/* <div>
-				price: {price}
-				<br />
-				deposit: {deposit}
-				<br />
-				date: {JSON.stringify(date)}
-				<br />
-				loan: {loanTerm} {typeof loanTerm}
-			</div> */}
-		</FormStyled>
+		</form>
 	);
 }

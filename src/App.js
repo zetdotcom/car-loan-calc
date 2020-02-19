@@ -4,7 +4,7 @@ import LoanSummaryContainer from 'containers/LoanSummaryContainer';
 import FormAndSummaryContainer from 'containers/FormAndSummaryContainer';
 import CarsListContainer from 'containers/CarsListContainer';
 import Header from 'components/Header';
-import MainContainer from 'components/ui/MainContainer';
+import FlexContainer from 'components/ui/FlexContainer';
 import Context from './context';
 import { GlobalStyle } from './style';
 import styled from 'styled-components';
@@ -26,21 +26,20 @@ function App() {
 			<header>
 				<Header />
 			</header>
-			<div>
-				<Context.Provider
+
+			{/* <Context.Provider
 					value={
 						{
 							// monthlyPayments,
 							//  loanTotal, setMonthly, setLoanTotal, loanTermMonths, setLoanTermMonths
 						}
 					}
-				>
-					<FormAndSummaryContainer setMonthly={setMonthly} />
-					{/* <FormContainer />
+				> */}
+			<FormAndSummaryContainer setMonthly={setMonthly} />
+			{/* <FormContainer />
 						<LoanSummaryContainer /> */}
-					<CarsListContainer monthly={monthly} />
-				</Context.Provider>
-			</div>
+			<CarsListContainer monthly={monthly} />
+			{/* </Context.Provider> */}
 		</AppWrapper>
 	);
 }

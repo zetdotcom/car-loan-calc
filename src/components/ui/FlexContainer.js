@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const ContainerStyled = styled.div`
 	display: flex;
 	/* flex-direction: ${props => (props.column ? 'column' : 'row')}; */
-	margin: 0 15px;
+	margin: 0 auto;
 	flex-flow: row wrap;
 	justify-content: center;
 	@media (max-width: 600px) {
@@ -17,8 +17,8 @@ const ContainerStyled = styled.div`
 	}
 `;
 
-export default function MainContainer({ children }) {
+export default function FlexContainer({ children }) {
 	return <ContainerStyled>{children}</ContainerStyled>;
 }
 
-MainContainer.propTypes = {};
+FlexContainer.propTypes = {};
