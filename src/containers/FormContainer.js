@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import LoanForm from 'components/LoanForm';
-
+import Context from 'context';
 import PropTypes from 'prop-types';
 
 export default function FormContainer() {
@@ -10,6 +10,8 @@ export default function FormContainer() {
 	const [loanTerm, setLoanTerm] = useState(2);
 	const [depositError, setDepositError] = useState(false);
 	const [dateError, setDateError] = useState(false);
+
+	const { setMonthly, setLoanTotal } = useContext(Context);
 
 	useEffect(() => {
 		setDepositError(deposit !== '' && deposit < price * 0.15);
@@ -23,6 +25,10 @@ export default function FormContainer() {
 		e.preventDefault();
 		if (!dateError && !depositError) {
 			console.log('submit');
+			const monthly = (price - deposit) / 12;
+			const loanTotal = price - deposit + 88 + 20;
+			setLoanTotal(loanTotal);
+			setMonthly(monthly);
 		}
 	}
 

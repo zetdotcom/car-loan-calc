@@ -14,7 +14,7 @@ import DateFnsUtils from '@date-io/date-fns';
 import styled from 'styled-components';
 import { FormControl } from '@material-ui/core';
 
-const PaperStyled = styled(Paper)`
+export const PaperStyled = styled(Paper)`
 	display: flex;
 	flex-direction: column;
 	padding: 36px 48px;
