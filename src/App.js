@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import FormContainer from 'containers/FormContainer';
 import LoanSummaryContainer from 'containers/LoanSummaryContainer';
+import FormAndSummaryContainer from 'containers/FormAndSummaryContainer';
 import CarsListContainer from 'containers/CarsListContainer';
 import Header from 'components/Header';
 import MainContainer from 'components/ui/MainContainer';
@@ -15,8 +16,9 @@ const AppWrapper = styled.div`
 
 function App() {
 	const [monthly, setMonthly] = useState('');
-	const [loanTotal, setLoanTotal] = useState('');
-	const [loanTermMonths, setLoanTermMonths] = useState('');
+	// const [loanTotal, setLoanTotal] = useState('');
+	// const [loanTermMonths, setLoanTermMonths] = useState('');
+	// const [deliveryDate, setDeliveryDate] = useState(new Date())
 
 	return (
 		<AppWrapper>
@@ -25,12 +27,18 @@ function App() {
 				<Header />
 			</header>
 			<div>
-				<Context.Provider value={{ monthly, loanTotal, setMonthly, setLoanTotal, loanTermMonths, setLoanTermMonths }}>
-					<MainContainer>
-						<FormContainer />
-						<LoanSummaryContainer />
-					</MainContainer>
-					<CarsListContainer />
+				<Context.Provider
+					value={
+						{
+							// monthlyPayments,
+							//  loanTotal, setMonthly, setLoanTotal, loanTermMonths, setLoanTermMonths
+						}
+					}
+				>
+					<FormAndSummaryContainer setMonthly={setMonthly} />
+					{/* <FormContainer />
+						<LoanSummaryContainer /> */}
+					<CarsListContainer monthly={monthly} />
 				</Context.Provider>
 			</div>
 		</AppWrapper>
