@@ -5,8 +5,9 @@ import Context from 'context';
 
 export default function LoanSummaryContainer(props) {
 	const data = useContext(Context);
+	const { loanTotal, monthly, loanTermMonths } = data;
 
-	return <LoanSummary monthly={data.monthly} loanTotal={data.loanTotal} />;
+	return <LoanSummary monthly={monthly} loanTotal={loanTotal} loanTermMonths={loanTermMonths} />;
 }
 
 LoanSummaryContainer.propTypes = {};

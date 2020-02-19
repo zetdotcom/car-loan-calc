@@ -13,6 +13,7 @@ import DateFnsUtils from '@date-io/date-fns';
 
 import styled from 'styled-components';
 import { FormControl } from '@material-ui/core';
+// import { ONE_DAY_IN_MS } from 'constants';
 
 export const PaperStyled = styled(Paper)`
 	display: flex;
@@ -55,7 +56,7 @@ export default function LoanForm(props) {
 		dateError,
 	} = props;
 
-	console.log(date.getTime(), new Date().getTime(), 60 * 60 * 24);
+	// console.log(date.getTime(), new Date().getTime(), ONE_DAY_IN_MS);
 
 	return (
 		<FormStyled onSubmit={onSubmit}>

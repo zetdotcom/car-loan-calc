@@ -16,6 +16,7 @@ const AppWrapper = styled.div`
 function App() {
 	const [monthly, setMonthly] = useState('');
 	const [loanTotal, setLoanTotal] = useState('');
+	const [loanTermMonths, setLoanTermMonths] = useState('');
 
 	return (
 		<AppWrapper>
@@ -24,7 +25,7 @@ function App() {
 				<Header />
 			</header>
 			<div>
-				<Context.Provider value={{ monthly, loanTotal, setMonthly, setLoanTotal }}>
+				<Context.Provider value={{ monthly, loanTotal, setMonthly, setLoanTotal, loanTermMonths, setLoanTermMonths }}>
 					<MainContainer>
 						<FormContainer />
 						<LoanSummaryContainer />
