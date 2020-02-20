@@ -33,7 +33,7 @@ const PaymentScheduleListItem = styled.li`
 `;
 
 export default function LoanSummary(props) {
-	const { monthly, loanTotal, loanTermMonths, paymentSchedule } = props;
+	const { monthly, loanTotal, paymentSchedule } = props;
 
 	return (
 		<div>
