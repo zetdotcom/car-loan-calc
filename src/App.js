@@ -24,9 +24,7 @@ function App() {
 	return (
 		<AppWrapper>
 			<GlobalStyle />
-			<header>
-				<Header />
-			</header>
+			<Header />
 
 			{/* <Context.Provider
 					value={

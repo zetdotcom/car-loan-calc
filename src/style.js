@@ -19,5 +19,6 @@ export const GlobalStyle = createGlobalStyle`
 
 // colors
 export const dark = 'rgb(45, 55, 55)';
+export const yellow = '#FFDE00';
 export const green = 'linear-gradient(45deg, black, transparent)';
 export const greenBg = 'linear-gradient(180deg, #12b447, #10a140)';

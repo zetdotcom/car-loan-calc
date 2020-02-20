@@ -12,6 +12,11 @@ const FlexItem = styled.div`
 	padding: 5px;
 	justify-content: ${props => props.justifyContent};
 	display: ${props => props.justifyContent && 'flex'};
+	@media (max-width: 600px) {
+		margin: 0;
+		flex: 1;
+		max-height: 100%;
+	}
 `;
 
 export default FlexItem;

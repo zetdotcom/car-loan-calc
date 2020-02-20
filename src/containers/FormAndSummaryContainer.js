@@ -44,13 +44,16 @@ export default function FormAndSumaryContainer(props) {
 		const filledArray = Array(loanTermMonths).fill();
 		const paymentSchedule = filledArray.map((x, index) => {
 			let monthlyPay = monthly;
+			let info = '';
 			if (index === 0) {
 				monthlyPay = monthly + ARR_FEE;
+				info = 'incl. £80 arrangement fee';
 			}
 			if (index === filledArray.length - 1) {
 				monthlyPay = monthly + COMP_FEE;
+				info = 'incl. £20 completion fee';
 			}
-			return { date: payDates(index + 1), amount: monthlyPay };
+			return { date: payDates(index + 1), amount: monthlyPay, info: info };
 		});
 
 		setPaymentSchedule(paymentSchedule);

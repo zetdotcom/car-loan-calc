@@ -11,7 +11,7 @@ const PaperStyled = styled(Paper)`
 	justify-content: space-around;
 	@media (max-width: 430px) {
 		padding: 10px 15px;
-		width: 100%;
+		/* width: 100%; */
 	}
 `;
 
