@@ -9,8 +9,8 @@ import FlexContainer from 'components/ui/FlexContainer';
 import FlexItem from 'components/ui/FlexItem';
 
 export default function FormAndSumaryContainer(props) {
-	const [price, setPrice] = useState(1000);
-	const [deposit, setDeposit] = useState(200);
+	const [price, setPrice] = useState(10000);
+	const [deposit, setDeposit] = useState(2000);
 	const [date, setDate] = useState(new Date());
 	const [loanTerm, setLoanTerm] = useState(2);
 	const [depositError, setDepositError] = useState(false);
@@ -84,7 +84,7 @@ export default function FormAndSumaryContainer(props) {
 					dateError={dateError}
 				/>
 			</FlexItem>
-			<FlexItem flex='3 1 320px'>
+			<FlexItem flex='3 1 320px' maxHeight='570px'>
 				<LoanSummary
 					monthly={monthly}
 					loanTotal={loanTotal}

@@ -13,7 +13,6 @@ export default function LoanSummary(props) {
 
 	return (
 		<div>
-			{/* <PaperStyled elevation={3}> */}
 			<Heading2>Loan summary</Heading2>
 			<Heading3>Total loan amount (incl. fees): {pounds(loanTotal)}</Heading3>
 			<Heading3>Monthly payment: {pounds(monthly)}</Heading3>
@@ -26,7 +25,6 @@ export default function LoanSummary(props) {
 					</li>
 				))}
 			</ul>
-			{/* </PaperStyled> */}
 		</div>
 	);
 }
