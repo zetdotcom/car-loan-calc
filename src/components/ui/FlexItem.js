@@ -10,6 +10,8 @@ const FlexItem = styled.div`
 	max-height: ${props => props.maxHeight};
 	overflow: auto;
 	padding: 5px;
+	justify-content: ${props => props.justifyContent};
+	display: ${props => props.justifyContent && 'flex'};
 `;
 
 export default FlexItem;

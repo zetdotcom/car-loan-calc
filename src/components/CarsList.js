@@ -1,12 +1,8 @@
 import React from 'react';
-// import GridList from '@material-ui/core/GridList';
-// import GridListTile from '@material-ui/core/GridListTile';
-// import GridListTileBar from '@material-ui/core/GridListTileBar';
-// import ListSubheader from '@material-ui/core/ListSubheader';
-import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
+import LinearProgress from '@material-ui/core/LinearProgress';
 import styled from 'styled-components';
 import awaitingImage from '../images/awaiting-image.jpg';
+import { Heading2 } from './ui/Headings';
 
 const GridListWrapper = styled.div`
 	overflow: 'hidden';
@@ -62,26 +58,11 @@ const GridListTielBarSubtitle = styled.div`
 
 export default function CarsList({ cars, loading }) {
 	return (
-		// <div>
-		// 	Cars:{' '}
-		// 	{loading ? (
-		// 		<div>LOADING...</div>
-		// 	) : (
-		// 		<ul>
-		// 			{cars.map(car => {
-		// 				return (
-		// 					<li>
-		// 						{car.title.name} | {car.title.variant}
-		// 						<img src={car.thumbnails[0]} />
-		// 					</li>
-		// 				);
-		// 			})}
-		// 		</ul>
-		// 	)}
-		// </div>
 		<GridListWrapper>
+			<Heading2>Cars affordable based on monthly payment</Heading2>
+			{!cars.length && !loading && <p>No results</p>}
 			{loading ? (
-				<div>LOADING...</div>
+				<LinearProgress />
 			) : (
 				<GridListStyled cellHeight={180}>
 					{cars.map(car => (

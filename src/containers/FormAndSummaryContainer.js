@@ -32,7 +32,8 @@ export default function FormAndSumaryContainer(props) {
 
 	useEffect(() => {
 		props.setMonthly(monthly);
-	}, [monthly]);
+		props.setCarPrice(price);
+	}, [monthly, price, props]);
 
 	useEffect(() => {
 		loanTermMonths && getPaymentSchedule();
@@ -84,7 +85,7 @@ export default function FormAndSumaryContainer(props) {
 					dateError={dateError}
 				/>
 			</FlexItem>
-			<FlexItem flex='3 1 320px' maxHeight='570px'>
+			<FlexItem flex='3 1 320px' maxHeight='570px' justifyContent='center'>
 				<LoanSummary
 					monthly={monthly}
 					loanTotal={loanTotal}

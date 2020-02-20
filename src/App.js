@@ -16,6 +16,7 @@ const AppWrapper = styled.div`
 
 function App() {
 	const [monthly, setMonthly] = useState('');
+	const [carPrice, setCarPrice] = useState('');
 	// const [loanTotal, setLoanTotal] = useState('');
 	// const [loanTermMonths, setLoanTermMonths] = useState('');
 	// const [deliveryDate, setDeliveryDate] = useState(new Date())
@@ -35,10 +36,10 @@ function App() {
 						}
 					}
 				> */}
-			<FormAndSummaryContainer setMonthly={setMonthly} />
+			<FormAndSummaryContainer setMonthly={setMonthly} setCarPrice={setCarPrice} />
 			{/* <FormContainer />
 						<LoanSummaryContainer /> */}
-			<CarsListContainer monthly={monthly} />
+			<CarsListContainer monthly={monthly} carPrice={carPrice} />
 			{/* </Context.Provider> */}
 		</AppWrapper>
 	);
