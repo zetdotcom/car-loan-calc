@@ -71,11 +71,6 @@ export default function CarsList({ cars, loading }) {
 							<GridListTileBar href={`https://www.arnoldclark.com${car.url}`} target='blank'>
 								<GridListTielBarTitle>{car.title.name}</GridListTielBarTitle>
 								<GridListTielBarSubtitle>{car.title.variant}</GridListTielBarSubtitle>
-								{/* actionIcon={
-								<IconButton style={{ color: 'white' }} aria-label={`info about ${car.title.name}`}>
-									<InfoIcon />
-								</IconButton>
-							} */}
 							</GridListTileBar>
 						</GridListTile>
 					))}

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loan Summary should match snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h2
+      class="sc-AxirZ mSIYX"
+    >
+      Loan summary
+    </h2>
+    <h3
+      class="sc-AxiKw duxOnD"
+      data-testid="totalLoanDisplay"
+    >
+      Total loan amount (incl. fees): £0.00
+    </h3>
+    <h3
+      class="sc-AxiKw duxOnD"
+      data-testid="monthlyPaymentDisplay"
+    >
+      Monthly payment: £0.00
+    </h3>
+    <ul
+      class="sc-AxhCb jXGAek"
+    />
+  </div>
+</DocumentFragment>
+`;

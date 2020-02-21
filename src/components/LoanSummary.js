@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import { format } from 'date-fns';
 import { DATE_FORMAT } from 'constants/common';
 import { pounds } from 'utils';
-import PaperStyled from 'components/ui/PaperStyled';
 import { Heading2, Heading3 } from './ui/Headings';
-import FlexItem from 'components/ui/FlexItem';
 import styled from 'styled-components';
 
 const PaymentScheduleList = styled.ul`
@@ -24,7 +22,6 @@ const PaymentScheduleListItem = styled.li`
 	background: lightgray;
 	border-radius: 4px;
 	list-style: none;
-	/* padding: 5px 15px; */
 	width: 200px;
 	margin: 5px;
 	& span {
@@ -38,15 +35,15 @@ export default function LoanSummary(props) {
 	return (
 		<div>
 			<Heading2>Loan summary</Heading2>
-			<Heading3>Total loan amount (incl. fees): {pounds(loanTotal)}</Heading3>
-			<Heading3>Monthly payment: {pounds(monthly)}</Heading3>
+			<Heading3 data-testid='totalLoanDisplay'>Total loan amount (incl. fees): {pounds(loanTotal)}</Heading3>
+			<Heading3 data-testid='monthlyPaymentDisplay'>Monthly payment: {pounds(monthly)}</Heading3>
 			<PaymentScheduleList>
 				{paymentSchedule.map(item => (
-					<PaymentScheduleListItem>
+					<PaymentScheduleListItem key={item.date} data-testid='payListItem'>
 						<p>
 							{format(item.date, DATE_FORMAT)} - {pounds(item.amount)}
 						</p>
-						<span>{item.info}</span>
+						<span data-testid='payListSpan'>{item.info}</span>
 					</PaymentScheduleListItem>
 				))}
 			</PaymentScheduleList>

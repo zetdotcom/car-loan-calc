@@ -1,6 +1,5 @@
 import 'date-fns';
 import React from 'react';
-import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
@@ -12,7 +11,6 @@ import DateFnsUtils from '@date-io/date-fns';
 
 import styled from 'styled-components';
 import { FormControl } from '@material-ui/core';
-import FlexItem from 'components/ui/FlexItem';
 import { Heading2 } from 'components/ui/Headings';
 import PaperStyled from 'components/ui/PaperStyled';
 import { pounds } from 'utils';
@@ -37,7 +35,6 @@ export default function LoanForm(props) {
 		loanTerm,
 		handleLoanTermChange,
 		depositError,
-		dateError,
 	} = props;
 
 	return (
@@ -66,25 +63,21 @@ export default function LoanForm(props) {
 					value={deposit}
 					onChange={handleDepositChange}
 				/>
-				<MuiPickersUtilsProvider utils={DateFnsUtils}>
+				<MuiPickersUtilsProvider utils={DateFnsUtils} style={{ cursor: 'pointer' }}>
 					<DatePicker
-						error={dateError}
 						inputVariant='outlined'
-						helperText={dateError ? `Delivery date cannot be in the past` : ''}
 						format='dd/MM/yyyy'
 						margin='normal'
 						id='date-picker'
 						label='Delivery date'
 						value={date}
 						onChange={handleDateChange}
-						InputAdornmentProps={{ position: 'start' }}
-						KeyboardButtonProps={{
-							'aria-label': 'change date',
-						}}
+						minDate={new Date()}
+						minDateMessage='Date should not be in the past'
 					/>
 				</MuiPickersUtilsProvider>
 				<FormControl component='fieldset' margin='normal'>
-					<FormLabel component='legend'>Loan Term</FormLabel>
+					<FormLabel component='legend'>Loan term</FormLabel>
 					<RadioGroupStyled aria-label='Loan term' name='loan term' value={loanTerm} onChange={handleLoanTermChange}>
 						<FormControlLabel value={1} control={<Radio />} label='1 year' />
 						<FormControlLabel value={2} control={<Radio />} label='2 years' />

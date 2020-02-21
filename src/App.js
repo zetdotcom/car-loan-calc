@@ -12,14 +12,13 @@ const AppWrapper = styled.div`
 
 function App() {
 	const [monthly, setMonthly] = useState('');
-	const [carPrice, setCarPrice] = useState('');
 
 	return (
 		<AppWrapper>
 			<GlobalStyle />
 			<Header />
-			<FormAndSummaryContainer setMonthly={setMonthly} setCarPrice={setCarPrice} />
-			<CarsListContainer monthly={monthly} carPrice={carPrice} />
+			<FormAndSummaryContainer setMonthly={setMonthly} />
+			<CarsListContainer monthly={monthly} />
 		</AppWrapper>
 	);
 }

@@ -1,13 +1,15 @@
-import React from 'react';
+import styled from 'styled-components';
+import { fontDark } from 'style';
 
-export const Heading1 = ({ children }) => {
-	return <h1>{children}</h1>;
-};
+export const Heading1 = styled.h1`
+	font-size: 2rem;
+`;
 
-export const Heading2 = ({ children }) => {
-	return <h2>{children}</h2>;
-};
+export const Heading2 = styled.h2`
+	font-size: 1.6rem;
+	color: ${fontDark};
+`;
 
-export const Heading3 = ({ children }) => {
-	return <h3>{children}</h3>;
-};
+export const Heading3 = styled.h3`
+	font-size: 1.3rem;
+`;
