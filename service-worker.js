@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/car-loan-calc/precache-manifest.58b32f3f0bfe0631855b36d2b13adf33.js"
+  "/car-loan-calc/precache-manifest.a8f0c6326c6543f5b67f32a1c2e37881.js"
 );
 
 self.addEventListener('message', (event) => {

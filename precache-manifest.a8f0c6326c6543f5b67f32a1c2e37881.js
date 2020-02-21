@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9ec984b54166f01080ad0adfa7bbf0a9",
+    "revision": "f811cb696e0921dc3e224d8791c8305d",
     "url": "/car-loan-calc/index.html"
   },
   {
-    "revision": "2104f287a4ca9016fcb5",
+    "revision": "2ef2e416d3ddb9df87c9",
     "url": "/car-loan-calc/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/car-loan-calc/static/js/2.1a244343.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2104f287a4ca9016fcb5",
-    "url": "/car-loan-calc/static/js/main.a7513ed4.chunk.js"
+    "revision": "2ef2e416d3ddb9df87c9",
+    "url": "/car-loan-calc/static/js/main.88632619.chunk.js"
   },
   {
     "revision": "73b1f6c96b5a29c280d0",
