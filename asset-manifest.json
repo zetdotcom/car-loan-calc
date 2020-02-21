@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/car-loan-calc/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/car-loan-calc/static/js/main.a7513ed4.chunk.js",
+    "main.js.map": "/car-loan-calc/static/js/main.a7513ed4.chunk.js.map",
+    "runtime-main.js": "/car-loan-calc/static/js/runtime-main.6b4fbf80.js",
+    "runtime-main.js.map": "/car-loan-calc/static/js/runtime-main.6b4fbf80.js.map",
+    "static/js/2.1a244343.chunk.js": "/car-loan-calc/static/js/2.1a244343.chunk.js",
+    "static/js/2.1a244343.chunk.js.map": "/car-loan-calc/static/js/2.1a244343.chunk.js.map",
+    "index.html": "/car-loan-calc/index.html",
+    "precache-manifest.58b32f3f0bfe0631855b36d2b13adf33.js": "/car-loan-calc/precache-manifest.58b32f3f0bfe0631855b36d2b13adf33.js",
+    "service-worker.js": "/car-loan-calc/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/car-loan-calc/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.1a244343.chunk.js.LICENSE.txt": "/car-loan-calc/static/js/2.1a244343.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6b4fbf80.js",
+    "static/js/2.1a244343.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.a7513ed4.chunk.js"
+  ]
+}
