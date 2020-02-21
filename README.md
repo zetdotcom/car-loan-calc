@@ -1,3 +1,5 @@
+## DEMO: [https://zetdotcom.github.io/car-loan-calc/](https://zetdotcom.github.io/car-loan-calc/)
+
 ## Available Scripts
 
 In the project directory, you can run:
