@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 const ContainerStyled = styled.div`
 	display: flex;
@@ -20,5 +19,3 @@ const ContainerStyled = styled.div`
 export default function FlexContainer({ children }) {
 	return <ContainerStyled>{children}</ContainerStyled>;
 }
-
-FlexContainer.propTypes = {};

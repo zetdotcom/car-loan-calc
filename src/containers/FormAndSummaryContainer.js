@@ -6,8 +6,8 @@ import FlexContainer from 'components/ui/FlexContainer';
 import FlexItem from 'components/ui/FlexItem';
 
 export default function FormAndSumaryContainer(props) {
-	const [price, setPrice] = useState(10000);
-	const [deposit, setDeposit] = useState(2000);
+	const [price, setPrice] = useState('');
+	const [deposit, setDeposit] = useState('');
 	const [date, setDate] = useState(new Date());
 	const [loanTerm, setLoanTerm] = useState(2);
 	const [depositError, setDepositError] = useState(false);
@@ -77,7 +77,7 @@ export default function FormAndSumaryContainer(props) {
 					depositError={depositError}
 				/>
 			</FlexItem>
-			<FlexItem flex='3 1 320px' maxHeight='570px' justifyContent='center'>
+			<FlexItem flex='3 1 320px' justifyContent='center'>
 				<LoanSummary monthly={monthly} loanTotal={loanTotal} paymentSchedule={paymentSchedule} />
 			</FlexItem>
 		</FlexContainer>

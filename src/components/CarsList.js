@@ -3,6 +3,7 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 import styled from 'styled-components';
 import awaitingImage from '../images/awaiting-image.jpg';
 import { Heading2 } from './ui/Headings';
+import PaperStyled from './ui/PaperStyled';
 
 const GridListWrapper = styled.div`
 	overflow: 'hidden';
@@ -59,23 +60,25 @@ const GridListTielBarSubtitle = styled.div`
 export default function CarsList({ cars, loading }) {
 	return (
 		<GridListWrapper>
-			<Heading2>Cars affordable based on monthly payment</Heading2>
-			{!cars.length && !loading && <p>No results</p>}
-			{loading ? (
-				<LinearProgress />
-			) : (
-				<GridListStyled cellHeight={180}>
-					{cars.map(car => (
-						<GridListTile key={car.stockReference}>
-							<GridTileImage src={car.imageCount ? car.thumbnails[0] : awaitingImage} alt={car.title.name} />
-							<GridListTileBar href={`https://www.arnoldclark.com${car.url}`} target='blank'>
-								<GridListTielBarTitle>{car.title.name}</GridListTielBarTitle>
-								<GridListTielBarSubtitle>{car.title.variant}</GridListTielBarSubtitle>
-							</GridListTileBar>
-						</GridListTile>
-					))}
-				</GridListStyled>
-			)}
+			<PaperStyled elevation={3}>
+				<Heading2>Cars affordable based on monthly payment</Heading2>
+				{!cars.length && !loading && <p>No results</p>}
+				{loading ? (
+					<LinearProgress />
+				) : (
+					<GridListStyled cellHeight={180}>
+						{cars.map(car => (
+							<GridListTile key={car.stockReference}>
+								<GridTileImage src={car.imageCount ? car.thumbnails[0] : awaitingImage} alt={car.title.name} />
+								<GridListTileBar href={`https://www.arnoldclark.com${car.url}`} target='blank'>
+									<GridListTielBarTitle>{car.title.name}</GridListTielBarTitle>
+									<GridListTielBarSubtitle>{car.title.variant}</GridListTielBarSubtitle>
+								</GridListTileBar>
+							</GridListTile>
+						))}
+					</GridListStyled>
+				)}
+			</PaperStyled>
 		</GridListWrapper>
 	);
 }

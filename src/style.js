@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
 
   // You can continue writing global styles here
   body {
-    /* text-align: center; */
+    background-color: rgb(250, 250, 250);
     min-height: 100vh;
     display: flex;
     flex-direction: column;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import FormAndSummaryContainer from 'containers/FormAndSummaryContainer';
 import CarsListContainer from 'containers/CarsListContainer';
 import Header from 'components/Header';

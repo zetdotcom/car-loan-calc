@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup, fireEvent, waitForElement } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import LoanSummary from 'components/LoanSummary';
 
@@ -43,8 +43,6 @@ describe('Loan Summary', () => {
 
 		expect(totalLoan).toHaveTextContent('£0.00');
 		expect(monthly).toHaveTextContent('£0.00');
-		// expect(payListItem).not.toBeInDocument();
-		// expect(payListSpan).not.toBeInDocument();
 
 		rerender(renderComponent({ loanTotal: 8108, monthly: 100, paymentSchedule: mockPaymentSchedule }).component);
 		const payListItem = getAllByTestId('payListItem');
@@ -55,7 +53,5 @@ describe('Loan Summary', () => {
 		expect(payListSpan[0]).toBeInTheDocument();
 		expect(payListItem[0]).toHaveTextContent('01 Mar 2020 - £421.33');
 		expect(payListSpan[0]).toHaveTextContent('incl. £80');
-		expect(payListItem).toHaveLength(3);
-		// expect(payListSpan).not.toBeInDocument();
 	});
 });

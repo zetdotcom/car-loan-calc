@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import CarsList from 'components/CarsList';
 
 export default function CarsListContainer({ monthly }) {
@@ -24,5 +23,3 @@ export default function CarsListContainer({ monthly }) {
 
 	return <CarsList cars={cars} loading={loading} />;
 }
-
-CarsListContainer.propTypes = {};

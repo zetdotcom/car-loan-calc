@@ -4,7 +4,7 @@ exports[`LoanForm should match snapshot 1`] = `
 <DocumentFragment>
   <form>
     <div
-      class="MuiPaper-root sc-AxhUy icrqyL MuiPaper-elevation3 MuiPaper-rounded"
+      class="MuiPaper-root sc-AxhUy gCIszr MuiPaper-elevation3 MuiPaper-rounded"
     >
       <h2
         class="sc-AxiKw hsrZvz"
@@ -321,7 +321,7 @@ exports[`LoanForm should match snapshot 1`] = `
       </fieldset>
       <br />
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-AxjAm dMOQXt MuiButton-containedPrimary"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-AxjAm bixfS MuiButton-containedPrimary"
         tabindex="0"
         type="submit"
       >
